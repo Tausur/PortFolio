@@ -22,7 +22,7 @@ const Works = (props) => {
     <main className=''>
 
       <div
-        className="pt-24 pb-5 md:px-10"
+        className="pt-24 pb-5 md:px-10 px-7"
         style={props.theme == 'dark' ? styles.dark : styles.white}>
 
         <div className='flex justify-center'>
