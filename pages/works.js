@@ -50,6 +50,9 @@ const Works = (props) => {
 }
 
 export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URL)
+  }
   let works = await Work.find()
   works = works.reverse()
   return {
