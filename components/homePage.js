@@ -46,7 +46,7 @@ const HomePage = (theme) => {
       </div>
 
       {/* works */}
-      <div className='px-8 flex '>
+      <div className='px-8 flex md:justify-center'>
         <div className='md:w-2/3'>
           <h1 className='text-2xl font-mono border-b-4 inline-block border-gray-500'>Works</h1>
           <div className='py-5'>
