@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import HomePage from '../components/homePage'
+import mongoose from 'mongoose'
+import Blog from '../model/Blog'
+import Work from '../model/Work'
 
 
 export default function Home(props) {
@@ -17,4 +20,15 @@ export default function Home(props) {
     </div>
     </>
   )
+}
+
+export async function getServerSideProps({ context }) {
+  await mongoose.connect(process.env.MONGO_URL)
+  let works = await Work.find()
+  works = works.reverse()
+  let blogs = await Blog.find()
+  blogs = blogs.reverse()
+  return {
+    props : {...null}
+  }
 }
