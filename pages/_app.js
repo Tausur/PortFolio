@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import mongoose from 'mongoose'
 
 function MyApp({ Component, pageProps }) {
 
@@ -20,13 +19,6 @@ function MyApp({ Component, pageProps }) {
     <Component {...pageProps} theme={mode}/>
     <Footer theme={mode} />
   </>
-}
-
-export async function getServerSideProps(){
-    await mongoose.connect(process.env.MONGO_URL)
-    return {
-    props : {...null}
-  }
 }
 
 export default MyApp
