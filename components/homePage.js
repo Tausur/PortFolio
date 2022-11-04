@@ -22,7 +22,7 @@ const HomePage = (theme) => {
     <div className={theme.theme == 'dark' ? styles.dark : styles.white} style={theme.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
     <div className='w-2/3'>
 
-      <div className='px-5 py-5'>
+      <div className='flex justify-center py-5'>
 
         <h1 className={styles.bio} style={theme.theme == 'dark' ? styles.darkBioCol : styles.whiteBioCol}>
           {"Hello, I'm a web developer based in Bangladesh"}
@@ -46,8 +46,8 @@ const HomePage = (theme) => {
       </div>
 
       {/* works */}
-      <div className='px-8 flex md:justify-center '>
-        <div className='md:w-2/6'>
+      <div className='px-8 flex '>
+        <div className='md:w-2/3'>
           <h1 className='text-2xl font-mono border-b-4 inline-block border-gray-500'>Works</h1>
           <div className='py-5'>
             <p className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad sed excepturi ipsa accusantium corrupti eum omnis cum quae adipisci asperiores molestiae quas, praesentium enim quaerat, nulla iste velit porro vitae necessitatibus. Recusandae fuga consequuntur nemo incidunt non deserunt officiis similique, earum id tempora sapiente illum voluptate quibusdam maxime necessitatibus!</p>
