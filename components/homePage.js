@@ -13,8 +13,8 @@ const HomePage = (theme) => {
     'whiteBioCol': { 'background': 'white' },
     'darkCol': { 'background': 'rgb(32 32 35)' },
     'whiteCol': { 'background': '#f0e7db' },
-    'dark': 'text-white pt-20 overflow-hidden',
-    'white': 'text-black pt-20 overflow-hidden'
+    'dark': 'text-white pt-20 overflow-hidden w-2/3',
+    'white': 'text-black pt-20 overflow-hidden w-2/3'
   }
 
 
