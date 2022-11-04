@@ -61,7 +61,7 @@ const Works = (props) => {
 
                     <div className='flex items-center'>
                       <p className='px-2 font-lg text-green-900 rounded-md font-bold inline-block' style={{ 'background': 'rgb(104 148 120)' }}>Platform</p>
-                      <p className='font-semibold text-lg text-fuchsia-500'>{data.info[0].Platform}</p>
+                      <p className='px-2 font-semibold text-lg text-fuchsia-500'>{data.info[0].Platform}</p>
                     </div>
 
                     <div className='flex items-center '>
