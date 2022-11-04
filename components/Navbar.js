@@ -46,11 +46,11 @@ const Navbar = props => {
           <div className="list-none hidden md:flex">
 
             <li className='text-lg font-semibold px-4'>
-              <Link href={'/works'}>Works</Link>
+              <a href={'https://metawave.vercel.app/works'}>Works</a>
             </li>
 
             <li className='text-lg font-semibold px-4'>
-              <Link href={'/posts'}>Posts</Link>
+              <a href={'/posts'}>Posts</a>
             </li>
 
             <Link href={'https://github.com/tausur'}>
