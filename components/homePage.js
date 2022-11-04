@@ -13,13 +13,14 @@ const HomePage = (theme) => {
     'whiteBioCol': { 'background': 'white' },
     'darkCol': { 'background': 'rgb(32 32 35)' },
     'whiteCol': { 'background': '#f0e7db' },
-    'dark': 'text-white pt-20 overflow-hidden flex justify-center',
-    'white': 'text-black pt-20 overflow-hidden flex justify-center'
+    'dark': 'text-white pt-20 overflow-hidden',
+    'white': 'text-black pt-20 overflow-hidden'
   }
 
 
   return (
     <div className={theme.theme == 'dark' ? styles.dark : styles.white} style={theme.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
+    <div className='w-2/3'>
 
       <div className='flex justify-center py-5'>
 
@@ -100,7 +101,7 @@ const HomePage = (theme) => {
 
           </div>
       </div>
-
+      </div>
     </div>
 </div>
   )
