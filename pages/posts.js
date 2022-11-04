@@ -45,9 +45,6 @@ const Posts = (props) => {
 };
 
 export async function getServerSideProps(context) {
-  if (!mongoose.connections[0].readyState) {
-    await mongoose.connect(process.env.MONGO_URL)
-  }
   let blogs = await Blog.find()
   blogs = blogs.reverse()
   return {
