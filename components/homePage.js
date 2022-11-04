@@ -19,8 +19,8 @@ const HomePage = (theme) => {
 
 
   return (
-    <div className='flex justify-center'>
     <div className={theme.theme == 'dark' ? styles.dark : styles.white} style={theme.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
+    <div className='flex justify-center'>
 
       <div className='flex justify-center py-5'>
 
