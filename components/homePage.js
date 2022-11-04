@@ -20,7 +20,6 @@ const HomePage = (theme) => {
 
   return (
     <div className={theme.theme == 'dark' ? styles.dark : styles.white} style={theme.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
-    <div className='w-2/3'>
 
       <div className='flex justify-center py-5'>
 
@@ -100,7 +99,6 @@ const HomePage = (theme) => {
             </div>
 
           </div>
-        </div>
       </div>
 
     </div>
