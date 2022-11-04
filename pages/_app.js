@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
   </>
 }
 
-export function getServerSideProps(){
+export async function getServerSideProps(){
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URL)
   }
