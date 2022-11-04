@@ -31,8 +31,7 @@ const Works = (props) => {
             <div className=" md:flex justify-center md:flex-wrap">
               {/* Works thumnail and Detail */}
               {props.works.map((data) => {
-                return (
-                  <div className="py-6 md:w-1/3 md:mx-2 mx-5" key={data._id}>
+                return <div className="py-6 md:w-1/3 md:mx-2 mx-5" key={data._id}>
                     <Link href={`/Works/${data.productName}`}>
                       <img src={data.image} className="md:w-72 w-full rounded-xl object-cover object-center shadow-xl cursor-pointer"/>
                     </Link>
@@ -41,7 +40,6 @@ const Works = (props) => {
                       {data.shortDesc}
                     </p>
                   </div>
-                )
               })}
             </div>
           </div>
