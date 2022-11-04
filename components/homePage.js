@@ -13,8 +13,8 @@ const HomePage = (theme) => {
     'whiteBioCol': { 'background': 'white' },
     'darkCol': { 'background': 'rgb(32 32 35)' },
     'whiteCol': { 'background': '#f0e7db' },
-    'dark': 'text-white pt-20 overflow-hidden',
-    'white': 'text-black pt-20 overflow-hidden'
+    'dark': 'text-white pt-20 overflow-hidden flex justify-center',
+    'white': 'text-black pt-20 overflow-hidden flex justify-center'
   }
 
 
@@ -22,7 +22,7 @@ const HomePage = (theme) => {
     <div className={theme.theme == 'dark' ? styles.dark : styles.white} style={theme.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
     <div className='w-2/3'>
 
-      <div className='flex justify-center py-5'>
+      <div className='px-5 py-5'>
 
         <h1 className={styles.bio} style={theme.theme == 'dark' ? styles.darkBioCol : styles.whiteBioCol}>
           {"Hello, I'm a web developer based in Bangladesh"}
