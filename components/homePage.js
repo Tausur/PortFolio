@@ -56,12 +56,12 @@ const HomePage = (theme) => {
       </div>
 
       {/* bio */}
-      <div className='md:px-8 px-4 w-full'>
+      <div className='md:px-8 px-4 w-full md:justify-start'>
         <About />
       </div>
 
       {/* I love */}
-      <div className='flex md:justify-center'>
+      <div className='flex md:justify-start'>
         <div className='px-8 md:px-0 py-5 pb-10 md:w-1/3'>
           <div className='inline-flex items-center text-2xl font-mono border-b-4 border-gray-500'>
             <p className='pr-1'>I</p>
