@@ -22,7 +22,7 @@ const Blogs = (props) => {
     <main>
 
       <div
-        className="pt-24 pb-5 md:px-10 px-5"
+        className="pt-24 pb-5 md:px-10 px-8"
         style={props.theme == 'dark' ? styles.dark : styles.white}>
 
         <div className='flex justify-center'>
@@ -30,7 +30,7 @@ const Blogs = (props) => {
           {props.blogs.map((blog) => {
             if (router.query.blog == blog.BlogName) {
               return (
-                <div className='md:w-1/2 px-8 py-5' key={blog.id}>
+                <div className='md:w-1/2 py-5' key={blog.id}>
 
                   <Head>
                     <title>{blog.title}</title>
