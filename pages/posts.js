@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BlogPost from '../components/BlogPost';
 import Head from 'next/head';
 import mongoose from 'mongoose'
 import Blog from '../model/Blog'
+import { BiSearch } from 'react-icons/bi'
 
 const Posts = (props) => {
 
@@ -11,7 +12,7 @@ const Posts = (props) => {
     white: { background: '#f0e7db' },
   };
 
-  // console.log(props.blogs[0].BlogName)
+  const [search, setSearch] = useState('')
 
   return (
     <>
@@ -30,13 +31,32 @@ const Posts = (props) => {
             Posts
           </h1>
 
+          {/* Search bar */}
+          <div className='my-8 py-1 flex items-center justify-center '>
+            <div className='px-2 inline-flex items-center rounded-full border-2 border-gray-500'>
+              <input value={search} onChange={(e) => setSearch(e.target.value)} type="text" className='bg-transparent focus:outline-none px-4 py-2 md:w-96 border-r-2 border-gray-500' placeholder="Search blogs by it's title or any hotword" />
+              <button>
+                <BiSearch className='text-xl mx-2' />
+              </button>
+            </div>
+          </div>
+
           {/* All Posts and Blogs here */}
           <div className="md:flex justify-center md:flex-wrap">
-            {props.blogs.map((blog) => {
+            {search == '' && props.blogs.map((blog) => {
               return (
-                <BlogPost key={blog._id} blogName={blog.BlogName} title={blog.title} body={blog.body} image={blog.image} ShortDesc={blog.shortDesc}/>
+                <BlogPost key={blog._id} blogName={blog.BlogName} title={blog.title} body={blog.body} image={blog.image} ShortDesc={blog.shortDesc} />
               )
             })}
+
+            {search !== '' && props.blogs.map((blog) => {
+              if (blog.title.toLowerCase().slice(0, search.length) == search.toLowerCase().slice(0, search.length)) {
+                return (
+                  <BlogPost key={blog._id} blogName={blog.BlogName} title={blog.title} body={blog.body} image={blog.image} ShortDesc={blog.shortDesc} />
+                )
+              }
+            })}
+
           </div>
         </div>
       </div>
