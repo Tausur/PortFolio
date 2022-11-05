@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { IoIosArrowForward } from 'react-icons/io'
+import { HiOutlineExternalLink } from 'react-icons/hi'
 import Head from 'next/head';
 import mongoose from 'mongoose';
 import Work from '../../model/Work'
@@ -22,7 +23,7 @@ const Works = (props) => {
     <main className=''>
 
       <div
-        className="pt-24 pb-5 md:px-10 px-7"
+        className="pt-24 pb-5 md:px-10 px-8"
         style={props.theme == 'dark' ? styles.dark : styles.white}>
 
         <div className='flex justify-center'>
@@ -55,8 +56,9 @@ const Works = (props) => {
                     <div className='flex items-center'>
                       <p className='px-2 font-lg text-green-900 rounded-md font-bold inline-block' style={{ 'background': 'rgb(104 148 120)' }}>Website</p>
                       <Link href={`https://${data.info[0].Website}`}>
-                        <p className='px-3 font-semibold cursor-pointer text-lg text-fuchsia-500'>{data.info[0].Website}</p>
+                        <p className='pl-3 underline cursor-pointer text-lg text-fuchsia-500'>{data.info[0].Website}</p>
                       </Link>
+                      <HiOutlineExternalLink className='text-fuchsia-500 mt-1 mx-1'/>
                     </div>
 
                     <div className='flex items-center'>
@@ -72,8 +74,9 @@ const Works = (props) => {
                     <div className='flex items-center'>
                       <p className='px-2 font-lg text-green-900 rounded-md font-bold inline-block' style={{ 'background': 'rgb(104 148 120)' }}>BlogPost</p>
                       <Link href={`https://metawave.vercel.app/Blogs/${data.info[0].Blog}`}>
-                        <p className='px-3 cursor-pointer font-semibold text-lg text-fuchsia-500'>Click me</p>
+                        <p className='pl-3 cursor-pointer underline text-lg text-fuchsia-500'>{`/Blogs/${data.info[0].Blog}`}</p>
                       </Link>
+                      <HiOutlineExternalLink className='text-fuchsia-500 mt-1 mx-1'/>
                     </div>
 
                   </div>
