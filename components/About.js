@@ -16,7 +16,7 @@ const About = () => {
           <p>Started to coding</p>
         </div>
         <div className='flex pb-2'>
-          <p className='pr-5'>2021</p>
+          <p className='pr-5'>2021 to Present</p>
           <p>Working as a full stack Web developer</p>
         </div>
         <div className='flex py-3'>
