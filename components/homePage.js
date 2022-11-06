@@ -51,7 +51,7 @@ const HomePage = (theme) => {
           <div className='md:w-2/3'>
             <h1 className='text-2xl font-mono border-b-4 inline-block border-gray-500'>Works</h1>
             <div className='py-5'>
-              <p className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad sed excepturi ipsa accusantium corrupti eum omnis cum quae adipisci asperiores molestiae quas, praesentium enim quaerat, nulla iste velit porro vitae necessitatibus. Recusandae fuga consequuntur nemo incidunt non deserunt officiis similique, earum id tempora sapiente illum voluptate quibusdam maxime necessitatibus!</p>
+              <p className='text-md'>Tausur Rahaman is a full stack developer, worked on app, web and game development. I am currently studying in a high school in Bangladesh. I also have worked on data analytics and data science. I have always desired to solve my real life problems through coding as well as designing and launching products etc. When not with code, I just go outside , like to travel. Currently, I am living off as a student and also working on various projects which is extends my ability day by day.</p>
             </div>
           </div>
         </div>
