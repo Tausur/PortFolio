@@ -56,7 +56,7 @@ const Posts = (props) => {
                   <BlogPost key={blog._id} blogName={blog.BlogName} title={blog.title} body={blog.body} image={blog.image} ShortDesc={blog.shortDesc} />
                 )
               }
-                                              )}
+                                                                              })
             })}
 
           </div>
