@@ -51,7 +51,7 @@ const Posts = (props) => {
 
             {search !== '' && props.blogs.map((blog) => {
               blog.title.toLowerCase().split(" ").map((text)=>{
-              if (text == search.toLowerCase().slice(0, search.length)) {
+              if (text == search.toLowerCase()) {
                 return (
                   <BlogPost key={blog._id} blogName={blog.BlogName} title={blog.title} body={blog.body} image={blog.image} ShortDesc={blog.shortDesc} />
                 )
