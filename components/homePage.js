@@ -66,7 +66,7 @@ const HomePage = (theme) => {
           <div className='px-10 md:px-0 py-5 pb-10 md:w-2/5'>
             <div className='inline-flex items-center text-2xl font-mono border-b-4 border-gray-500'>
               <p className='pr-1'>I</p>
-              <AiFillHeart />
+              <AiFillHeart className='text-red-500'/>
             </div>
             <p className='py-2'>
               Machine Learning, Drawing, Travelling, Playing Cricket, Cycling, Music
