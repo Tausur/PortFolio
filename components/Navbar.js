@@ -37,7 +37,7 @@ const Navbar = props => {
           <div className="text-xl px-6 flex-1">
             <p
               style={{ fontFamily: 'cursive', cursor: 'pointer' }}
-              className="inline-block">
+              className="inline-block hover:text-sky-500 ease-in-out duration-500">
               <Link href='/'>Tausur Rahaman</Link>
             </p>
           </div>
@@ -45,16 +45,16 @@ const Navbar = props => {
           {/* pc navbar options */}
           <div className="list-none hidden md:flex">
 
-            <li className='text-lg font-semibold px-4'>
-              <Link href={'https://metawave.vercel.app/works'}>Works</Link>
+            <li className='text-lg px-4 hover:underline hover:text-sky-500 ease-in-out duration-500 hover:-translate-y-1'>
+              <Link href={'/works'}>Works</Link>
             </li>
 
-            <li className='text-lg font-semibold px-4'>
+            <li className='text-lg px-4 hover:underline hover:text-sky-500 ease-in-out duration-500 hover:-translate-y-1'>
               <Link href={'/posts'}>Posts</Link>
             </li>
 
             <Link href={'https://github.com/tausur'}>
-              <button className="text-md font-semibold px-4">Source</button>
+              <button className="text-md font-semibold px-4 hover:underline hover:text-sky-500 ease-in-out duration-500 hover:-translate-y-1">Source</button>
             </Link>
           </div>
         </div>

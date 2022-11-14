@@ -4,8 +4,9 @@ import { AiFillHeart } from 'react-icons/ai'
 import { BsGithub } from 'react-icons/bs'
 import Link from 'next/link'
 import { CgWebsite } from 'react-icons/cg'
+import BlogPost from '../components/BlogPost'
 
-const HomePage = (theme) => {
+const HomePage = (props) => {
 
   let styles = {
     'bio': 'text-lg px-7 py-3 inline-flex rounded-md justify-center mx-7',
@@ -16,16 +17,16 @@ const HomePage = (theme) => {
     'dark': 'text-white pt-20 overflow-hidden flex md:justify-center',
     'white': 'text-black pt-20 overflow-hidden flex md:justify-center'
   }
-
+  let blogs = [props.props.blogs[0], props.props.blogs[1]] 
 
   return (
-    <div className={theme.theme == 'dark' ? styles.dark : styles.white} style={theme.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
+    <div className={props.props.theme == 'dark' ? styles.dark : styles.white} style={props.props.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
 
-      <div className='md:w-2/3'>
+      <div className='md:w-7/12'>
 
         <div className='flex justify-center py-5'>
 
-          <h1 className={styles.bio} style={theme.theme == 'dark' ? styles.darkBioCol : styles.whiteBioCol}>
+          <h1 className={styles.bio} style={props.props.theme == 'dark' ? styles.darkBioCol : styles.whiteBioCol}>
             {"Hello, I'm a web developer based in Bangladesh"}
           </h1>
 
@@ -46,61 +47,81 @@ const HomePage = (theme) => {
           <img src="/profile.jpg" alt="" className='rounded-full w-32 border-2 border-white pointer-events-none' />
         </div>
 
-        {/* works */}
-        <div className='px-8 flex md:justify-center'>
-          <div className='md:w-2/3'>
-            <h1 className='text-2xl font-mono border-b-4 inline-block border-gray-500'>Works</h1>
-            <div className='py-5'>
-              <p className='text-md'>Tausur Rahaman is a full stack developer, worked on app, web and game development. I am currently studying in a high school in Bangladesh. I also have worked on data analytics and data science. I have always desired to solve my real life problems through coding as well as designing and launching products etc. When not with code, I just go outside , like to travel. Currently, I am living off as a student and also working on various projects which is extending my ability day by day.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* bio */}
-        <div className='flex md:justify-center px-10'>
-          <About />
-        </div>
-
-        {/* I love */}
-        <div className='flex md:justify-center'>
-          <div className='px-10 md:px-0 py-5 pb-10 md:w-2/5'>
-            <div className='inline-flex items-center text-2xl font-mono border-b-4 border-gray-500'>
-              <p className='pr-1'>I</p>
-              <AiFillHeart className='text-red-500'/>
-            </div>
-            <p className='py-2'>
-              Machine Learning, Drawing, Travelling, Playing Cricket, Cycling, Music
-            </p>
-          </div>
-        </div>
-
-        {/* on the web */}
-        <div className='flex md:justify-center pb-10'>
-          <div className='md:w-2/5 px-10 md:px-0'>
-            <h1 className='text-2xl font-mono inline-block border-b-4 border-gray-500'>On the web</h1>
-            <div className='py-5 px-5'>
-
-              {/* github */}
-              <div className='flex items-center'>
-                <BsGithub className='text-xl' />
-                <button className='pl-3 text-lg text-teal-500 font-semibold '>
-                  <Link href='https://github.com/tausur'>@Tausur</Link>
-                </button>
-              </div>
-
-              {/* Website */}
-              <div className='py-2'>
-                <div className='flex items-center'>
-                  <CgWebsite className='text-xl' />
-                  <button className='pl-5 text-lg text-teal-500 font-semibold '>
-                    <Link href={'https://tausur-rahaman.vercel.app'}>
-                      Website
-                    </Link>
-                  </button>
+        <div className='px-10 flex justify-center'>
+          <div className=''>
+            {/* works */}
+            <div className='flex justify-center'>
+              <div className=''>
+                <h1 className='text-2xl text-teal-500 font-mono border-b-4 inline-block border-gray-500'>Works</h1>
+                <div className='py-5'>
+                  <p className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad sed excepturi ipsa accusantium corrupti eum omnis cum quae adipisci asperiores molestiae quas, praesentium enim quaerat, nulla iste velit porro vitae necessitatibus. Recusandae fuga consequuntur nemo incidunt non deserunt officiis similique, earum id tempora sapiente illum voluptate quibusdam maxime necessitatibus!</p>
                 </div>
               </div>
-
             </div>
+
+            {/* bio */}
+            <div className='flex'>
+              <About />
+            </div>
+
+            {/* I love */}
+            <div className='flex'>
+              <div className='md:px-0 py-5 pb-10'>
+                <div className='inline-flex items-center text-2xl font-mono border-b-4 border-gray-500'>
+                  <p className='pr-1 text-teal-500'>I</p>
+                  <AiFillHeart className='text-red-500'/>
+                </div>
+                <p className='py-2'>
+                  Machine Learning, Drawing, Travelling, Playing Cricket, Cycling, Music
+                </p>
+              </div>
+            </div>
+
+            {/* on the web */}
+            <div className='flex pb-2'>
+              <div className='md:px-0'>
+                <h1 className='text-2xl text-teal-500 font-mono inline-block border-b-4 border-gray-500'>On the web</h1>
+                <div className='py-5 px-5'>
+
+                  {/* github */}
+                  <div className='flex items-center'>
+                    <BsGithub className='text-xl' />
+                    <button className='pl-3 text-lg text-sky-500 font-semibold '>
+                      <Link href='https://github.com/tausur'>@Tausur</Link>
+                    </button>
+                  </div>
+
+                  {/* Website */}
+                  <div className='py-2'>
+                    <div className='flex items-center'>
+                      <CgWebsite className='text-xl' />
+                      <button className='pl-5 text-lg text-sky-500 font-semibold '>
+                        <Link href={'https://tausur-rahaman.vercel.app'}>
+                          Website
+                        </Link>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div className='flex pb-8'>
+              {blogs.map((blog)=>{
+                return(
+                  <div key={blog._id}>
+                    <Link href={`/Blogs/${blog.BlogName}`}>
+                      <div className='px-3 cursor-pointer'>
+                        <img src={blog.image} alt="" className='rounded-lg md:h-32 md:w-60 h-24'/>
+                        <p className='text-lg px-5'>{blog.title}</p>
+                      </div>
+                    </Link>
+                  </div>
+                )
+              })}
+            </div>
+
           </div>
         </div>
 
