@@ -15,7 +15,7 @@ export default function Home(props) {
         <link rel="icon" href="/metaIcon.png" />
       </Head>
       <main>
-        <HomePage theme={props.theme}/>
+        <HomePage props={props}/>
       </main>
     </div>
     </>
@@ -29,6 +29,6 @@ export async function getServerSideProps({ context }) {
   let blogs = await Blog.find()
   blogs = blogs.reverse()
   return {
-    props : {...null}
+    props : {blogs : JSON.parse(JSON.stringify(blogs))}
   }
 }
