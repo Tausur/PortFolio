@@ -81,7 +81,7 @@ const Blogs = (props) => {
                   })}
 
                   <div className='flex items-start'>
-                  <button className='rounded-full p-3 bg-teal-400 mt-3 mr-2' onClick={()=>setShare(share ? false : true)}>
+                  <button className='rounded-full p-3 bg-teal-400 mt-3 mr-2' title={'share'} onClick={()=>setShare(share ? false : true)}>
                     <BiShareAlt className='text-2xl text-black'/>
                   </button>
 
