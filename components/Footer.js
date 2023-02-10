@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = (theme) => {
+const Footer = (props) => {
 
   let styles = {
     'darkcol' : {'background':'rgb(32 32 35)'},
@@ -8,7 +8,7 @@ const Footer = (theme) => {
   }
 
   return (
-    <div className='flex justify-center text-gray-500 pb-7' style={theme.theme == 'dark' ? styles.darkcol:styles.whitecol}>
+    <div className='flex justify-center text-gray-500 pb-7' style={props.theme == 'dark' ? styles.darkcol:styles.whitecol}>
       <p className='text-md'>© 2022 Tausur Rahaman. All Rights Reserved.</p>
     </div>
   )

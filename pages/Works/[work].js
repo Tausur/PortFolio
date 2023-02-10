@@ -42,7 +42,7 @@ const Works = (props) => {
                     <Link href='/works'>
                       <button className="text-2xl text-teal-500 cursor-pointer">Works</button>
                     </Link>
-                    <IoIosArrowForward className='text-3xl px-1 font-bold' />
+                    <IoIosArrowForward className='text-3xl px-1 pt-2 font-bold' />
                     <p className="text-2xl cursor-pointer">{data.productName}</p>
                   </div>
 

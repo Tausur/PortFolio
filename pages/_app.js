@@ -1,7 +1,8 @@
 import '../styles/globals.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import mongoose from 'mongoose'
 
 function MyApp({ Component, pageProps }) {
 
@@ -13,12 +14,19 @@ function MyApp({ Component, pageProps }) {
 
   return <>
     <div className='fixed w-full backdrop-blur'>
-      <Navbar onSubmit={getData}/>
+      <Navbar onSubmit={getData} />
     </div>
 
-    <Component {...pageProps} theme={mode}/>
+    <Component {...pageProps} theme={mode} />
     <Footer theme={mode} />
   </>
 }
+
+// export async function getServerSideProps({ context }) {
+//   await mongoose.connect(process.env.MONGO_URL)
+//   return {
+//     props : {}
+//   }
+// }
 
 export default MyApp
