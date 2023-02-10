@@ -50,7 +50,7 @@ const Navbar = props => {
             </li>
 
             <li className='text-lg px-4 hover:underline hover:text-sky-500 ease-in-out duration-500 hover:-translate-y-1'>
-              <Link href={'/posts'}>Posts</Link>
+              <Link href={'/posts'} passHref>Posts</Link>
             </li>
 
             <Link href={'https://github.com/tausur'}>
