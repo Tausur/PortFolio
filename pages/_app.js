@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import mongoose from 'mongoose'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 function MyApp({ Component, pageProps }) {
 
@@ -16,8 +17,10 @@ function MyApp({ Component, pageProps }) {
     <div className='fixed w-full backdrop-blur'>
       <Navbar onSubmit={getData} />
     </div>
-
+    <ErrorBoundary>
     <Component {...pageProps} theme={mode} />
+    </ErrorBoundary>
+    
     <Footer theme={mode} />
   </>
 }
