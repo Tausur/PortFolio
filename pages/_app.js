@@ -22,11 +22,4 @@ function MyApp({ Component, pageProps }) {
   </>
 }
 
-// export async function getServerSideProps({ context }) {
-//   await mongoose.connect(process.env.MONGO_URL)
-//   return {
-//     props : {}
-//   }
-// }
-
 export default MyApp

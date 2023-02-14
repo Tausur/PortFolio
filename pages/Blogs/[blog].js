@@ -81,7 +81,7 @@ const Blogs = (props) => {
                   })}
 
                   <div className='flex items-start'>
-                  <button className='rounded-full p-3 bg-teal-400 mt-3 mr-2' title={'share'} onClick={()=>setShare(share ? false : true)}>
+                  <button className='rounded-full p-3 bg-teal-400 mt-3 mr-2' onClick={()=>setShare(share ? false : true)}>
                     <BiShareAlt className='text-2xl text-black'/>
                   </button>
 
@@ -117,22 +117,22 @@ const Blogs = (props) => {
         <h1 className='text-2xl text-gray-300 font-mono'>
           Recent posts
         </h1>
-              {blogs.map((blog) => {
-                return (
-                  <div key={blog._id} className='flex my-4'>
-                    <Link href={`/Blogs/${blog.BlogName}`}>
-                      <img src={blog.image} alt="" className='rounded-lg md:h-32 md:w-52 h-20 w-[10rem] md:mx-3 cursor-pointer' />
-                    </Link>
-                    <div className="content">
-                      <p className='text-lg px-2 md:px-4 font-semibold'>{blog.title}</p>
-                      <p className='text-md px-2 md:px-4 md:w-5/6 hidden md:block'>{blog.shortDesc}</p>
-                      <button className='text-blue-500 hover:scale-110 duration-300 ease-in-out md:px-4 px-3'>
-                      <Link href={`/Blogs/${blog.BlogName}`}>Read more</Link>
-                    </button>
-                    </div>
-                  </div>
-                )
-              })}
+        {/*{blogs.map((blog) => {
+          return (
+            <div key={blog._id} className='flex my-4'>
+              <Link href={`/Blogs/${blog.BlogName}`}>
+                <img src={blog.image} alt="" className='rounded-lg md:h-32 md:w-52 h-20 w-[10rem] md:mx-3 cursor-pointer' />
+              </Link>
+              <div className="content">
+                <p className='text-lg px-2 md:px-4 font-semibold'>{blog.title}</p>
+                <p className='text-md px-2 md:px-4 md:w-5/6 hidden md:block'>{blog.shortDesc}</p>
+                <button className='text-blue-500 hover:scale-110 duration-300 ease-in-out md:px-4 px-3'>
+                <Link href={`/Blogs/${blog.BlogName}`}>Read more</Link>
+              </button>
+              </div>
+            </div>
+          )
+        })}*/}
             </div>
       </div>
 

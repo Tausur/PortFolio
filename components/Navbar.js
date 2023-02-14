@@ -5,7 +5,7 @@ import { FiMenu } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-const Navbar = props => {
+const Navbar = (props) => {
 
   const router = useRouter()
 
@@ -50,7 +50,7 @@ const Navbar = props => {
             </li>
 
             <li className='text-lg px-4 hover:underline hover:text-sky-500 ease-in-out duration-500 hover:-translate-y-1'>
-              <Link href={'/posts'} passHref>Posts</Link>
+              <Link href={'/posts'}>Posts</Link>
             </li>
 
             <Link href={'https://github.com/tausur'}>
@@ -82,8 +82,8 @@ const Navbar = props => {
         </button>
       </div>
 
-      {menu && (
-        <div data-aos="fade-up-right">
+      {menu &&
+        <div>
           <div className="top-16 absolute right-3 bg-gray-700 rounded-md w-48 py-2 text-white">
             <Link href='/'>
               <button className="block text-xl font-mono cursor-pointer hover:bg-gray-600 duration-300 ease-in-out py-2 px-4 w-full">
@@ -107,7 +107,7 @@ const Navbar = props => {
             </Link>
           </div>
         </div>
-      )}
+      }
     </div>
   );
 };

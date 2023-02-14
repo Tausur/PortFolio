@@ -7,7 +7,7 @@ import Work from '../model/Work'
 
 export default function Home(props) {
   return (
-    <>
+    <div>
     <div>
       <Head>
         <title>Tausur Rahaman</title>
@@ -18,7 +18,7 @@ export default function Home(props) {
         <HomePage props={props}/>
       </main>
     </div>
-    </>
+    </div>
   )
 }
 
@@ -29,6 +29,6 @@ export async function getServerSideProps({ context }) {
   let blogs = await Blog.find()
   blogs = blogs.reverse()
   return {
-    props : {blogs : JSON.parse(JSON.stringify(blogs))}
+    props : {...null}
   }
 }

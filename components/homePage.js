@@ -17,7 +17,7 @@ const HomePage = (props) => {
     'dark': 'text-white pt-20 overflow-hidden flex md:justify-center',
     'white': 'text-black pt-20 overflow-hidden flex md:justify-center'
   }
-  let blogs = [props.props.blogs[0], props.props.blogs[1]]
+  // let blogs = [props.props.blogs[0], props.props.blogs[1]]
 
   return (
     <div className={props.props.theme == 'dark' ? styles.dark : styles.white} style={props.props.theme == 'dark' ? styles.darkCol : styles.whiteCol} >
@@ -108,7 +108,7 @@ const HomePage = (props) => {
             </div>
 
             <h1 className='text-2xl text-teal-500 border-b-4 inline-block mb-6 border-gray-500 font-mono'>Recent Uploads</h1>
-            <div className='mb-8'>
+            {/*<div className='mb-8'>
               {blogs.map((blog) => {
                 return (
                   <div key={blog._id} className='flex my-4'>
@@ -125,7 +125,7 @@ const HomePage = (props) => {
                   </div>
                 )
               })}
-            </div>
+            </div>*/}
 
           </div>
         </div>
