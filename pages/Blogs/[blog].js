@@ -46,7 +46,7 @@ const Blogs = (props) => {
           {props.blogs.map((blog) => {
             if (router.query.blog == blog.BlogName) {
               return (
-                <div className='md:w-2/3 py-5' key={blog.id}>
+                <div className='md:w-2/3 py-5' key={blog._id}>
 
                   <Head>
                     <title>{blog.title}</title>
